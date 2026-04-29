@@ -1,0 +1,9 @@
+{
+  "name": "mi-proyecto-final-web",
+  "version": "1.0.0",
+  "description": "Proyecto  Final - Sitio web con DevOps",
+  "scripts": {
+    "test": "echo 'Tests'",
+    "start": "python3 -m http.server 8000"
+  }
+}

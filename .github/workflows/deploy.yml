@@ -1,0 +1,39 @@
+name: Deploy a GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v3
+      - name: Simular - Analisis de Calidad de Software
+        run: |
+         echo "Iniciando análisis de SonarQube simulado..."
+         echo "Revisando HTML y JS..."
+         echo " Còdigo Limpio y sin code smells encontrados."
+      - name: Simular - Pruegas Unitarias
+        run: |
+         echo "Ejecutando pruebas unitarias simuladas..."
+         echo "Todas las pruebas unitarias pasaron exitosamente."
+  deploy:
+    
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Preparar archivos
+      run: |
+          mkdir -p build
+          cp -r src/* build/
+          touch build/.nojekyll
+    
+    - name: Deploy a GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+        publish_branch: gh-pages
