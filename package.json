@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Proyecto  Final - Sitio web con DevOps",
   "dependencies": {
-    "lodash": "4.17.11",
-    "express": "4.17.1"
+    "express": "^4.22.1",
+    "lodash": "^4.18.1"
   },
   "devDependencies": {
-    "jest": "26.0.0"
+    "jest": "^30.3.0"
   },
   "scripts": {
     "test": "jest",
