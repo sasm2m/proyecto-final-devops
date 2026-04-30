@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar el repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
       - name: Simular - Analisis de Calidad de Software
         run: |
          echo "Iniciando análisis de SonarQube simulado..."
@@ -23,7 +23,7 @@ jobs:
     
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     
     - name: Preparar archivos
       run: |
