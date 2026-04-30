@@ -1,13 +1,20 @@
 version: 2
-"on":
-  schedule:
-    - cron: "0 0 * * 0" # every Sunday at midnight
- updates:
-    - package-ecosystem: "npm"
-      directory: "/"
-      schedule:
-       interval: "weekly"
-      open-pull-requests-limit: 5
-      labels:
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
       - "security"
       - "dependencies"
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "security"
+      - "docker"
